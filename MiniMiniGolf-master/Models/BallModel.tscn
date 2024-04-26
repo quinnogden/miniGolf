@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Models/Textures/GolfBallTexture.jpg" type="Texture" id=1]
+[ext_resource path="res://Models/BallScript.gd" type="Script" id=2]
+[ext_resource path="res://Models/testArrow.dae" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Sounds/Swing.wav" type="AudioStream" id=4]
+
+[sub_resource type="PhysicsMaterial" id=1]
+bounce = 0.5
+
+[sub_resource type="SphereShape" id=2]
+
+[sub_resource type="SphereMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_texture = ExtResource( 1 )
+
+[node name="RigidBody" type="RigidBody"]
+physics_material_override = SubResource( 1 )
+contacts_reported = 4
+contact_monitor = true
+linear_damp = 0.3
+angular_damp = 0.3
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="testArrow" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.37114e-09, 7.77852e-08, 0, 0.192775 )
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 4 )

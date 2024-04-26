@@ -1,0 +1,211 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Levels/Office.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Models/BallModel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Models/Textures/[2K]Bricks31/BricksSpatialMaterial.tres" type="Material" id=3]
+[ext_resource path="res://Models/Textures/[2K]CarpetBlue/CarpetSpatialMaterial.tres" type="Material" id=4]
+[ext_resource path="res://Assets/GameUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Camera.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Hole.tscn" type="PackedScene" id=7]
+
+[sub_resource type="PrismMesh" id=1]
+left_to_right = 2.0
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.886275, 0.886275, 0.886275, 1 )
+metallic = 0.37
+metallic_texture_channel = 3
+
+[node name="Spatial" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10894, 0 )
+
+[node name="Room" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5449, -1.29377, -1.8912 )
+
+[node name="Ball" parent="." instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -3.89414e-07, 0, 1, 0, 3.89414e-07, 0, -1, -2.4221, -0.769602, -2.75526 )
+
+[node name="Camera" type="Camera" parent="Ball"]
+transform = Transform( -5, 6.33069e-07, -1.84128e-06, 0, 4.72833, 1.6257, 1.94707e-06, 1.6257, -4.72833, 0, 7.39103, -13.6572 )
+script = ExtResource( 6 )
+
+[node name="HoleLayout" type="Spatial" parent="."]
+transform = Transform( 0.507638, 0, 0, 0, 0.507638, 0, 0, 0, 0.507638, -20.1082, -1.11389, -24.2475 )
+
+[node name="Floor" type="CSGBox" parent="HoleLayout"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.808, 0.250099, 28.5435 )
+use_collision = true
+width = 5.70898
+height = 0.111705
+depth = 29.9078
+material = ExtResource( 4 )
+
+[node name="Floor3" type="CSGBox" parent="HoleLayout/Floor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.13868, 0, -8.92594 )
+use_collision = true
+width = 6.67707
+height = 0.111705
+depth = 5.66782
+material = ExtResource( 4 )
+
+[node name="Floor4" type="CSGBox" parent="HoleLayout/Floor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.04325, 4.76837e-07, -24.0107 )
+use_collision = true
+width = 4.18953
+height = 0.111705
+depth = 25.0337
+material = ExtResource( 4 )
+
+[node name="Floor5" type="CSGBox" parent="HoleLayout/Floor"]
+transform = Transform( 0.00359535, 0, 0.999994, 0, 1, 0, -0.999994, 0, 0.00359535, 0.846268, 9.38773e-07, -28.2858 )
+use_collision = true
+width = 15.7149
+height = 0.111705
+depth = 8.32169
+material = ExtResource( 4 )
+
+[node name="CSGMesh" type="CSGMesh" parent="HoleLayout/Floor"]
+transform = Transform( 0.0250277, 0, 1.55517, -0.0877008, 0.996146, 0.00141139, -0.996017, -0.0877121, 0.0160292, -0.129773, -0.146824, -10.1495 )
+mesh = SubResource( 1 )
+material = ExtResource( 4 )
+
+[node name="Starting Box" type="CSGBox" parent="HoleLayout"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.9683, 0.292567, 42.2594 )
+use_collision = true
+width = 1.99714
+height = 0.032176
+depth = 1.23757
+material = SubResource( 2 )
+
+[node name="Walls" type="CSGBox" parent="HoleLayout"]
+transform = Transform( 0.000850614, 0, 0.547634, 0, 0.547634, 0, -0.547634, 0, 0.000850614, 31.9514, 0.602114, 30.1938 )
+snap = 0.475
+use_collision = true
+width = 48.2113
+height = 1.24371
+depth = 1.33189
+material = ExtResource( 3 )
+
+[node name="Walls2" type="CSGBox" parent="HoleLayout/Walls"]
+transform = Transform( 0.999999, 0, -1.04774e-09, 0, 1, 0, 1.04774e-09, 0, 0.999999, -4.72406, 0, 10.4052 )
+snap = 0.475
+use_collision = true
+width = 38.756
+height = 1.24371
+depth = 1.33189
+material = ExtResource( 3 )
+
+[node name="Walls3" type="CSGBox" parent="HoleLayout/Walls"]
+transform = Transform( 0.0121645, 0, 0.999924, 0, 1, 0, -0.999924, 0, 0.0121645, -24.5288, 0, 5.16658 )
+snap = 0.475
+use_collision = true
+width = 11.7631
+height = 1.24371
+depth = 1.33189
+material = ExtResource( 3 )
+
+[node name="Walls4" type="CSGBox" parent="HoleLayout/Walls"]
+transform = Transform( 0.0121645, 0, 0.999924, 0, 1, 0, -0.999924, 0, 0.0121645, 13.8423, 0.033554, 16.7967 )
+snap = 0.475
+use_collision = true
+width = 11.7631
+height = 1.24371
+depth = 1.33189
+material = ExtResource( 3 )
+
+[node name="Walls5" type="CSGBox" parent="HoleLayout/Walls"]
+transform = Transform( -0.999997, 0, 0.000366274, 0, 1, 0, -0.000366274, 0, -0.999997, 41.9414, 0.033554, 22.0173 )
+snap = 0.475
+use_collision = true
+width = 55.8046
+height = 1.24371
+depth = 1.33189
+material = ExtResource( 3 )
+
+[node name="Walls7" type="CSGBox" parent="HoleLayout/Walls"]
+transform = Transform( -0.999997, 0, 0.000366274, 0, 1, 0, -0.000366274, 0, -0.999997, 41.9287, 0.033554, 13.8592 )
+snap = 0.475
+use_collision = true
+width = 33.0427
+height = 1.24371
+depth = 1.33189
+material = ExtResource( 3 )
+
+[node name="Walls6" type="CSGBox" parent="HoleLayout/Walls"]
+transform = Transform( -0.00268787, 0, 0.999994, 0, 1, 0, -0.999994, 0, -0.00268787, 24.9054, 0.033554, 12.3526 )
+snap = 0.475
+use_collision = true
+width = 4.38852
+height = 1.24371
+depth = 1.33189
+material = ExtResource( 3 )
+
+[node name="Walls8" type="CSGBox" parent="HoleLayout/Walls"]
+transform = Transform( -0.00268787, 0, 0.999994, 0, 1, 0, -0.999994, 0, -0.00268787, 40.3489, 0.033554, 6.32443 )
+snap = 0.475
+use_collision = true
+width = 13.703
+height = 1.24371
+depth = 1.33189
+material = ExtResource( 3 )
+
+[node name="Walls9" type="CSGBox" parent="HoleLayout/Walls"]
+transform = Transform( -0.999739, 0, 0.0227045, 0, 1, 0, -0.0227045, 0, -0.999739, 54.8172, 0.0335544, -0.869492 )
+snap = 0.475
+use_collision = true
+width = 30.2829
+height = 1.24371
+depth = 1.33189
+material = ExtResource( 3 )
+
+[node name="Walls10" type="CSGBox" parent="HoleLayout/Walls"]
+transform = Transform( -0.0102794, 0, -0.999943, 0, 1, 0, 0.999943, 0, -0.0102794, 69.3388, 0.0335544, 10.7075 )
+snap = 0.475
+use_collision = true
+width = 24.006
+height = 1.24371
+depth = 1.33189
+material = ExtResource( 3 )
+
+[node name="CSGTorus" type="CSGTorus" parent="HoleLayout"]
+transform = Transform( 1, 0, 0, 0, 0.0168939, -0.999857, 0, 0.999857, 0.0168939, 34.7172, 1.01722, 15.5794 )
+use_collision = true
+inner_radius = 2.13459
+sides = 24
+ring_sides = 15
+material = ExtResource( 3 )
+
+[node name="CSGCylinder" type="CSGCylinder" parent="HoleLayout"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.8091, 0, 15.5549 )
+use_collision = true
+radius = 0.662436
+height = 3.76415
+sides = 10
+material = ExtResource( 3 )
+
+[node name="CSGCylinder2" type="CSGCylinder" parent="HoleLayout"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40.8706, 0, 5.45443 )
+use_collision = true
+radius = 0.662436
+height = 3.76415
+sides = 10
+material = ExtResource( 3 )
+
+[node name="CSGCylinder3" type="CSGCylinder" parent="HoleLayout"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.7867, 0, -5.13187 )
+use_collision = true
+radius = 0.662436
+height = 3.76415
+sides = 10
+material = ExtResource( 3 )
+
+[node name="GameUI" parent="." instance=ExtResource( 5 )]
+
+[node name="Hole" parent="." instance=ExtResource( 7 )]
+transform = Transform( -3.25841e-08, 0, 0.2, 0, 0.2, 0, -0.2, 0, -3.25841e-08, -2.04027, -0.983285, -21.7297 )
+[connection signal="body_shape_entered" from="Ball" to="Hole" method="_on_Ball_body_shape_entered"]
+[connection signal="body_shape_entered" from="Ball" to="GameUI" method="_on_Ball_body_shape_entered"]
+[connection signal="hasStopped" from="Ball" to="Ball/Camera" method="_on_Ball_hasStopped"]
+[connection signal="powerChanged" from="Ball" to="GameUI" method="_on_Ball_powerChanged"]
+[connection signal="strokesChanged" from="Ball" to="GameUI" method="_on_Ball_strokesChanged"]
+[connection signal="openPopup" from="Ball/Camera" to="GameUI" method="_on_Camera_openPopup"]

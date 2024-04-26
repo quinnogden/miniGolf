@@ -1,0 +1,439 @@
+[gd_scene load_steps=43 format=2]
+
+[ext_resource path="res://Models/Office Stuff/DeskScene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Models/Textures/Carpet Grey/Carpet011_2K_AmbientOcclusion.jpg" type="Texture" id=3]
+[ext_resource path="res://Models/Textures/Carpet Grey/Carpet011_2K_Normal.jpg" type="Texture" id=4]
+[ext_resource path="res://Models/Textures/Carpet Grey/Carpet011_2K_Roughness.jpg" type="Texture" id=5]
+[ext_resource path="res://Models/Office Stuff/Meshes/Brass_Mania.obj" type="ArrayMesh" id=6]
+[ext_resource path="res://Models/Textures/BlueOfficeCarpet/EntranceCarpetspatialmaterial2.tres" type="Material" id=7]
+[ext_resource path="res://Models/Textures/Plaster001_4K-JPG/Plaster001_4K_Color.jpg" type="Texture" id=8]
+[ext_resource path="res://Models/Textures/Plaster001_4K-JPG/Plaster001_4K_Normal.jpg" type="Texture" id=9]
+[ext_resource path="res://Models/Textures/Marble004_2K-JPG/Marble004_2K_Roughness.jpg" type="Texture" id=10]
+[ext_resource path="res://Models/Textures/Marble004_2K-JPG/Marble004_2K_Color.jpg" type="Texture" id=11]
+[ext_resource path="res://Models/Textures/Plaster001_4K-JPG/Plaster001_4K_Roughness.jpg" type="Texture" id=12]
+[ext_resource path="res://Models/Textures/Marble004_2K-JPG/Marble004_2K_Normal.jpg" type="Texture" id=13]
+[ext_resource path="res://Models/Textures/BlueOfficeCarpet/Fabric023_2K_Roughness.jpg" type="Texture" id=14]
+[ext_resource path="res://Models/Textures/BlueOfficeCarpet/Fabric023_2K_Normal.jpg" type="Texture" id=15]
+[ext_resource path="res://Models/Textures/BlueOfficeCarpet/Fabric023_2K_Color.jpg" type="Texture" id=16]
+
+[sub_resource type="ProceduralSky" id=1]
+sky_top_color = Color( 0.87451, 0.937255, 0.972549, 1 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+ambient_light_color = Color( 1, 1, 1, 1 )
+ambient_light_energy = 1.02
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_texture = ExtResource( 11 )
+roughness_texture = ExtResource( 10 )
+roughness_texture_channel = 3
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 13 )
+uv1_scale = Vector3( 3, 3, 3 )
+uv1_triplanar = true
+
+[sub_resource type="ConcavePolygonShape" id=5]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[sub_resource type="CubeMesh" id=6]
+
+[sub_resource type="ConcavePolygonShape" id=7]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 0.596078, 1, 0.913725, 1 )
+albedo_texture = ExtResource( 16 )
+roughness_texture = ExtResource( 14 )
+roughness_texture_channel = 3
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 15 )
+uv1_scale = Vector3( 9.986, 6.37, 0.267 )
+uv1_triplanar = true
+
+[sub_resource type="ConcavePolygonShape" id=9]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[sub_resource type="CubeMesh" id=10]
+
+[sub_resource type="SpatialMaterial" id=11]
+albedo_color = Color( 0.372549, 0.321569, 0.321569, 0 )
+albedo_texture = ExtResource( 3 )
+roughness_texture = ExtResource( 5 )
+roughness_texture_channel = 3
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 4 )
+ao_enabled = true
+ao_light_affect = 0.0
+ao_texture = ExtResource( 3 )
+ao_on_uv2 = false
+ao_texture_channel = 3
+uv1_scale = Vector3( 4, 4, 4 )
+uv1_triplanar = true
+
+[sub_resource type="ConcavePolygonShape" id=12]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[sub_resource type="CubeMesh" id=13]
+
+[sub_resource type="SpatialMaterial" id=14]
+albedo_color = Color( 0.29541, 0.859375, 0.793285, 1 )
+
+[sub_resource type="ConcavePolygonShape" id=15]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[sub_resource type="ConcavePolygonShape" id=16]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[sub_resource type="ConcavePolygonShape" id=17]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[sub_resource type="ConcavePolygonShape" id=18]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[sub_resource type="CubeMesh" id=19]
+
+[sub_resource type="SpatialMaterial" id=20]
+albedo_color = Color( 0.909804, 0.909804, 0.909804, 1 )
+albedo_texture = ExtResource( 8 )
+metallic = 0.32
+roughness_texture = ExtResource( 12 )
+roughness_texture_channel = 3
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 9 )
+uv1_triplanar = true
+
+[sub_resource type="ConcavePolygonShape" id=21]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[sub_resource type="BoxShape" id=22]
+extents = Vector3( 1, 1, 1.05749 )
+
+[sub_resource type="ConcavePolygonShape" id=23]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[sub_resource type="ConcavePolygonShape" id=24]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[sub_resource type="ConcavePolygonShape" id=25]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[sub_resource type="ConcavePolygonShape" id=26]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[sub_resource type="ConcavePolygonShape" id=27]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="Office Space" type="Spatial" parent="."]
+
+[node name="Desks" type="Spatial" parent="Office Space"]
+
+[node name="DeskPod" parent="Office Space/Desks" instance=ExtResource( 1 )]
+transform = Transform( 1.74235, 0, 0, 0, 1.74235, 0, 0, 0, 1.74235, 14.9218, 0.266598, -12.3452 )
+
+[node name="DeskPod2" parent="Office Space/Desks" instance=ExtResource( 1 )]
+transform = Transform( 1.74235, 0, 0, 0, 1.74235, 0, 0, 0, 1.74235, 0.677513, 0.266598, -12.3452 )
+
+[node name="DeskPod3" parent="Office Space/Desks" instance=ExtResource( 1 )]
+transform = Transform( 1.74235, 0, 0, 0, 1.74235, 0, 0, 0, 1.74235, -13.9148, 0.266598, -12.3452 )
+
+[node name="DeskPod4" parent="Office Space/Desks" instance=ExtResource( 1 )]
+transform = Transform( 1.74235, 0, 0, 0, 1.74235, 0, 0, 0, 1.74235, -30.2614, 0.266598, -12.3452 )
+
+[node name="DeskPod5" parent="Office Space/Desks" instance=ExtResource( 1 )]
+transform = Transform( 1.74235, 0, 0, 0, 1.74235, 0, 0, 0, 1.74235, -45.8437, 0.266598, -12.3452 )
+
+[node name="Lights" type="Spatial" parent="Office Space"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.23024, 0 )
+
+[node name="LightFeature" type="Spatial" parent="Office Space/Lights"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.3755, -1.22563, 20.7618 )
+
+[node name="OmniLight" type="OmniLight" parent="Office Space/Lights/LightFeature"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0242157, 6.39243, 0.0280018 )
+light_energy = 0.43
+omni_range = 5.89518
+
+[node name="Brass_Mania" type="MeshInstance" parent="Office Space/Lights/LightFeature"]
+transform = Transform( 0.209721, 0, 0, 0, 0.209721, 0, 0, 0, 0.209721, 0.179384, 4.78921, -0.790409 )
+mesh = ExtResource( 6 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+
+[node name="LightFeature2" type="Spatial" parent="Office Space/Lights"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5991, -1.22563, 6.30823 )
+
+[node name="OmniLight" type="OmniLight" parent="Office Space/Lights/LightFeature2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0242157, 6.39243, 0.0280018 )
+light_energy = 0.43
+omni_range = 5.89518
+
+[node name="Brass_Mania" type="MeshInstance" parent="Office Space/Lights/LightFeature2"]
+transform = Transform( 0.209721, 0, 0, 0, 0.209721, 0, 0, 0, 0.209721, 0.179384, 4.78921, -0.790409 )
+mesh = ExtResource( 6 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+
+[node name="LightFeature3" type="Spatial" parent="Office Space/Lights"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0236, -1.22563, -0.290499 )
+
+[node name="OmniLight" type="OmniLight" parent="Office Space/Lights/LightFeature3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0242157, 6.39243, 0.0280018 )
+light_energy = 0.43
+omni_range = 5.89518
+
+[node name="Brass_Mania" type="MeshInstance" parent="Office Space/Lights/LightFeature3"]
+transform = Transform( 0.209721, 0, 0, 0, 0.209721, 0, 0, 0, 0.209721, 0.179384, 4.78921, -0.790409 )
+mesh = ExtResource( 6 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+
+[node name="LightFeature4" type="Spatial" parent="Office Space/Lights"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3265, -1.22563, 0.175578 )
+
+[node name="OmniLight" type="OmniLight" parent="Office Space/Lights/LightFeature4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0242157, 6.39243, 0.0280018 )
+light_energy = 0.43
+omni_range = 5.89518
+
+[node name="Brass_Mania" type="MeshInstance" parent="Office Space/Lights/LightFeature4"]
+transform = Transform( 0.209721, 0, 0, 0, 0.209721, 0, 0, 0, 0.209721, 0.179384, 4.78921, -0.790409 )
+mesh = ExtResource( 6 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+
+[node name="LightFeature5" type="Spatial" parent="Office Space/Lights"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.9917, -1.22563, 0.613774 )
+
+[node name="OmniLight" type="OmniLight" parent="Office Space/Lights/LightFeature5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0242157, 6.39243, 0.0280018 )
+light_energy = 0.43
+omni_range = 5.89518
+
+[node name="Brass_Mania" type="MeshInstance" parent="Office Space/Lights/LightFeature5"]
+transform = Transform( 0.209721, 0, 0, 0, 0.209721, 0, 0, 0, 0.209721, 0.179384, 4.78921, -0.790409 )
+mesh = ExtResource( 6 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+
+[node name="Floor" type="Spatial" parent="Office Space"]
+
+[node name="Concrete Floor" type="MeshInstance" parent="Office Space/Floor"]
+transform = Transform( 61.5253, 0, 0.897126, 0, 0.252149, 0, -1.12978, 0, 48.8553, 0, 0, 5.76711 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="StaticBody" type="StaticBody" parent="Office Space/Floor/Concrete Floor"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Office Space/Floor/Concrete Floor/StaticBody"]
+shape = SubResource( 5 )
+
+[node name="BlueEntranceCarpet" type="MeshInstance" parent="Office Space/Floor"]
+transform = Transform( 14.4528, 0, 0, 0, 1, 0, 0, 0, 16.1423, 31.3821, -0.729663, 39.0705 )
+mesh = SubResource( 6 )
+material/0 = ExtResource( 7 )
+
+[node name="StaticBody" type="StaticBody" parent="Office Space/Floor/BlueEntranceCarpet"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Office Space/Floor/BlueEntranceCarpet/StaticBody"]
+shape = SubResource( 7 )
+
+[node name="BlueLineCarpet" type="MeshInstance" parent="Office Space/Floor"]
+transform = Transform( 44.1462, 0, 0, 0, 1, 0, 0, 0, 1.96584, -16.6619, -0.729663, -2.3229 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 8 )
+
+[node name="StaticBody" type="StaticBody" parent="Office Space/Floor/BlueLineCarpet"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Office Space/Floor/BlueLineCarpet/StaticBody"]
+shape = SubResource( 9 )
+
+[node name="GreyCarpet" type="MeshInstance" parent="Office Space/Floor"]
+transform = Transform( 44.0921, 0, 0, 0, 1, 0, 0, 0, 18.995, -16.6051, -0.741961, -23.1955 )
+mesh = SubResource( 10 )
+material/0 = SubResource( 11 )
+
+[node name="StaticBody" type="StaticBody" parent="Office Space/Floor/GreyCarpet"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Office Space/Floor/GreyCarpet/StaticBody"]
+shape = SubResource( 12 )
+
+[node name="Walls" type="Spatial" parent="Office Space"]
+
+[node name="Pillar" type="MeshInstance" parent="Office Space/Walls"]
+transform = Transform( 1, 0, 0, 0, 8.31605, 0, 0, 0, 1, 26.1874, 5.64823, 16.3699 )
+mesh = SubResource( 13 )
+material/0 = SubResource( 14 )
+
+[node name="StaticBody" type="StaticBody" parent="Office Space/Walls/Pillar"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Office Space/Walls/Pillar/StaticBody"]
+shape = SubResource( 15 )
+
+[node name="Pillar2" type="MeshInstance" parent="Office Space/Walls"]
+transform = Transform( 1.92301, 0, 0, 0, 8.31605, 0, 0, 0, 1.63393, 0.390147, 5.64823, -39.7678 )
+mesh = SubResource( 13 )
+material/0 = SubResource( 14 )
+
+[node name="StaticBody" type="StaticBody" parent="Office Space/Walls/Pillar2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Office Space/Walls/Pillar2/StaticBody"]
+shape = SubResource( 16 )
+
+[node name="Pillar3" type="MeshInstance" parent="Office Space/Walls"]
+transform = Transform( 1.92301, 0, 0, 0, 8.31605, 0, 0, 0, 1.63393, -28.6325, 5.64823, -39.0671 )
+mesh = SubResource( 13 )
+material/0 = SubResource( 14 )
+
+[node name="StaticBody" type="StaticBody" parent="Office Space/Walls/Pillar3"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Office Space/Walls/Pillar3/StaticBody"]
+shape = SubResource( 17 )
+
+[node name="Pillar4" type="MeshInstance" parent="Office Space/Walls"]
+transform = Transform( 1.92301, 0, 0, 0, 8.31605, 0, 0, 0, 1.63393, -57.4487, 5.64823, -38.3109 )
+mesh = SubResource( 13 )
+material/0 = SubResource( 14 )
+
+[node name="StaticBody" type="StaticBody" parent="Office Space/Walls/Pillar4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Office Space/Walls/Pillar4/StaticBody"]
+shape = SubResource( 18 )
+
+[node name="Wall" type="MeshInstance" parent="Office Space/Walls"]
+transform = Transform( 0.513694, 0, 0.699597, 0, 10.9029, 0, -18.3769, 0, 0.0816474, 24.1344, 0, 31.9113 )
+mesh = SubResource( 19 )
+material/0 = SubResource( 20 )
+
+[node name="StaticBody" type="StaticBody" parent="Office Space/Walls/Wall"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Office Space/Walls/Wall/StaticBody"]
+shape = SubResource( 21 )
+
+[node name="Wall6" type="MeshInstance" parent="Office Space/Walls"]
+transform = Transform( 53.0002, 0, -0.0217429, 0, 2.74857, 0, -1.42443, 0, 0.704305, -7.68083, 0.8394, -41.8513 )
+mesh = SubResource( 19 )
+material/0 = SubResource( 20 )
+
+[node name="StaticBody" type="StaticBody" parent="Office Space/Walls/Wall6"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Office Space/Walls/Wall6/StaticBody"]
+shape = SubResource( 22 )
+
+[node name="Wall7" type="MeshInstance" parent="Office Space/Walls"]
+transform = Transform( -0.312316, 0, 0.703694, 0, 2.74857, 0, -29.6944, 0, 0.0204498, -59.6451, 0.8394, -10.5053 )
+mesh = SubResource( 19 )
+material/0 = SubResource( 20 )
+
+[node name="StaticBody" type="StaticBody" parent="Office Space/Walls/Wall7"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Office Space/Walls/Wall7/StaticBody"]
+shape = SubResource( 23 )
+
+[node name="Wall2" type="MeshInstance" parent="Office Space/Walls"]
+transform = Transform( 0.513694, 0, 0.699597, 0, 10.9029, 0, -45.0081, 0, 0.199968, 42.7203, 0, 1.17053 )
+mesh = SubResource( 19 )
+material/0 = SubResource( 20 )
+
+[node name="StaticBody" type="StaticBody" parent="Office Space/Walls/Wall2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Office Space/Walls/Wall2/StaticBody"]
+shape = SubResource( 24 )
+
+[node name="Wall5" type="MeshInstance" parent="Office Space/Walls"]
+transform = Transform( -42.3363, 0, 0.209118, 0, 10.9029, 0, -1.94523, 0, -0.692882, -17.8276, 0, 12.3393 )
+mesh = SubResource( 19 )
+material/0 = SubResource( 20 )
+
+[node name="StaticBody" type="StaticBody" parent="Office Space/Walls/Wall5"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Office Space/Walls/Wall5/StaticBody"]
+shape = SubResource( 25 )
+
+[node name="Wall3" type="MeshInstance" parent="Office Space/Walls"]
+transform = Transform( 13.815, 0, 0.0398018, 0, 10.9029, 0, -0.432391, 0, 0.696256, 31.6914, 0, 45.4879 )
+visible = false
+mesh = SubResource( 19 )
+material/0 = SubResource( 20 )
+
+[node name="StaticBody" type="StaticBody" parent="Office Space/Walls/Wall3"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Office Space/Walls/Wall3/StaticBody"]
+shape = SubResource( 26 )
+
+[node name="Wall4" type="MeshInstance" parent="Office Space/Walls"]
+transform = Transform( 55.5653, 0.948862, 0.0289876, -0.404885, -0.272751, -1.37893, -1.59373, 45.0569, -0.0889966, -4.20146, 11.8223, 1.31484 )
+mesh = SubResource( 19 )
+material/0 = SubResource( 20 )
+
+[node name="StaticBody" type="StaticBody" parent="Office Space/Walls/Wall4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Office Space/Walls/Wall4/StaticBody"]
+shape = SubResource( 27 )

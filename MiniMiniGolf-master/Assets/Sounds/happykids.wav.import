@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/happykids.wav-597341976ca34d3b123fbce4a171d112.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/happykids.wav"
+dest_files=[ "res://.import/happykids.wav-597341976ca34d3b123fbce4a171d112.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

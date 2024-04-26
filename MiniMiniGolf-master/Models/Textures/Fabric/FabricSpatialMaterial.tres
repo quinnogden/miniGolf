@@ -1,0 +1,26 @@
+[gd_resource type="SpatialMaterial" load_steps=5 format=2]
+
+[ext_resource path="res://Models/Textures/Fabric/Fabric01_disp.jpg" type="Texture" id=1]
+[ext_resource path="res://Models/Textures/Fabric/Fabric01_col.jpg" type="Texture" id=2]
+[ext_resource path="res://Models/Textures/Fabric/Fabric01_rgh.jpg" type="Texture" id=3]
+[ext_resource path="res://Models/Textures/Fabric/Fabric01_nrm.jpg" type="Texture" id=4]
+
+[resource]
+albedo_texture = ExtResource( 2 )
+roughness_texture = ExtResource( 3 )
+roughness_texture_channel = 3
+normal_enabled = true
+normal_scale = 5.48
+normal_texture = ExtResource( 4 )
+rim_enabled = true
+rim = 1.0
+rim_tint = 0.52
+rim_texture = ExtResource( 1 )
+depth_enabled = true
+depth_scale = 0.01
+depth_deep_parallax = true
+depth_min_layers = 8
+depth_max_layers = 32
+depth_flip_tangent = false
+depth_flip_binormal = false
+depth_texture = ExtResource( 1 )

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Brass_Mania.obj-94345243db6f82e0b37763eed17ee827.mesh"
+
+[deps]
+
+files=[ "res://.import/Brass_Mania.obj-94345243db6f82e0b37763eed17ee827.mesh" ]
+
+source_file="res://Models/Office Stuff/Meshes/Brass_Mania.obj"
+dest_files=[ "res://.import/Brass_Mania.obj-94345243db6f82e0b37763eed17ee827.mesh", "res://.import/Brass_Mania.obj-94345243db6f82e0b37763eed17ee827.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
